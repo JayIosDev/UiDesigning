@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EQH-dR-r1m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5JC-mp-GwX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -323,27 +323,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WKf-Zt-99I">
-                                <rect key="frame" x="62.5" y="40" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="IVa-Eu-qlV"/>
-                                    <constraint firstAttribute="height" constant="250" id="QCg-6t-N9C"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKf-Zt-99I">
+                                <rect key="frame" x="16" y="399" width="89" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kE-X1-YWW">
-                                <rect key="frame" x="110" y="359" width="154" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kE-X1-YWW">
+                                <rect key="frame" x="211" y="407" width="154" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.80151299639999996" blue="0.33538594179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="TUT-Cp-sFb"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Choose Image"/>
                                 <connections>
                                     <action selector="chooseImage:" destination="EQH-dR-r1m" eventType="touchUpInside" id="Uqq-ce-xf2"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Reply" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q3e-TI-HOO">
+                                <rect key="frame" x="34" y="76" width="310" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoL-0U-HBG">
+                                <rect key="frame" x="98" y="333" width="178" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reply"/>
+                                <connections>
+                                    <action selector="ReplyAct:" destination="EQH-dR-r1m" eventType="touchUpInside" id="hTD-fR-8iq"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ON-nT-gT1">
-                                <rect key="frame" x="115" y="476" width="149" height="28"/>
+                                <rect key="frame" x="115" y="493" width="149" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Save Photo"/>
@@ -353,20 +364,32 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="4kE-X1-YWW" firstAttribute="top" secondItem="WKf-Zt-99I" secondAttribute="bottom" constant="69" id="Bqq-mz-35v"/>
-                            <constraint firstItem="4kE-X1-YWW" firstAttribute="leading" secondItem="O4x-TX-NT3" secondAttribute="leading" constant="110" id="Gwh-pY-tEu"/>
-                            <constraint firstItem="WKf-Zt-99I" firstAttribute="centerX" secondItem="FwD-lv-5Ly" secondAttribute="centerX" id="JH6-1j-uyq"/>
-                            <constraint firstItem="O4x-TX-NT3" firstAttribute="trailing" secondItem="4kE-X1-YWW" secondAttribute="trailing" constant="111" id="QcO-E1-XQL"/>
-                            <constraint firstItem="WKf-Zt-99I" firstAttribute="top" secondItem="O4x-TX-NT3" secondAttribute="top" constant="20" id="jnu-I4-S1g"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O4x-TX-NT3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="VGA-mv-eno"/>
                     <connections>
                         <outlet property="ImageView" destination="WKf-Zt-99I" id="s57-0T-nw5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5o0-va-4iQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4712.8000000000002" y="206.44677661169416"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ndc-SS-2CN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5JC-mp-GwX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I9Q-Tb-GkG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EQH-dR-r1m" kind="relationship" relationship="rootViewController" id="0HU-NW-Jwn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2L-Yi-Udd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3773.5999999999999" y="206.44677661169416"/>
         </scene>
