@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B2089A321DF154000D89A25 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2089A221DF152D00D89A25 /* AssetsLibrary.framework */; };
 		4B2089AB21DF46FD00D89A25 /* RefreshedToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2089AA21DF46FC00D89A25 /* RefreshedToken.swift */; };
+		4B20BEF721E321BB001B1F6B /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20BEF621E321BB001B1F6B /* SampleViewController.swift */; };
 		4B2A4FDE21DA00D7007281F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2A4FDD21DA00D7007281F8 /* AppDelegate.swift */; };
 		4B2A4FE021DA00D7007281F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2A4FDF21DA00D7007281F8 /* ViewController.swift */; };
 		4B2A4FE321DA00D7007281F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B2A4FE121DA00D7007281F8 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		4B2089A221DF152D00D89A25 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		4B2089AA21DF46FC00D89A25 /* RefreshedToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshedToken.swift; sourceTree = "<group>"; };
+		4B20BEF621E321BB001B1F6B /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		4B2A4FDA21DA00D7007281F8 /* UiDesigning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UiDesigning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2A4FDD21DA00D7007281F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B2A4FDF21DA00D7007281F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				4B2089AA21DF46FC00D89A25 /* RefreshedToken.swift */,
 				4B2A4FE121DA00D7007281F8 /* Main.storyboard */,
 				4B2A4FF121DA162C007281F8 /* CreateTicketVC.swift */,
+				4B20BEF621E321BB001B1F6B /* SampleViewController.swift */,
 				4B2A4FE421DA00E9007281F8 /* Assets.xcassets */,
 				4B2A4FE621DA00E9007281F8 /* LaunchScreen.storyboard */,
 				4B2A4FE921DA00E9007281F8 /* Info.plist */,
@@ -112,6 +115,7 @@
 				4B2A4FD621DA00D7007281F8 /* Sources */,
 				4B2A4FD721DA00D7007281F8 /* Frameworks */,
 				4B2A4FD821DA00D7007281F8 /* Resources */,
+				4B20BEF521E31FF2001B1F6B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -170,6 +174,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4B20BEF521E31FF2001B1F6B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 6eb26943c44253261a34c1f999f0526f1885d9d2 0503ee20a6726a49d6f6b15360d14215221b131b0500f3f0106b66efe6294f44\n";
+		};
 		C47121150F457289107160FB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B20BEF721E321BB001B1F6B /* SampleViewController.swift in Sources */,
 				4B2089AB21DF46FD00D89A25 /* RefreshedToken.swift in Sources */,
 				4B2A4FF221DA162C007281F8 /* CreateTicketVC.swift in Sources */,
 				4B2A4FE021DA00D7007281F8 /* ViewController.swift in Sources */,
@@ -350,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 45GDH5BAMV;
 				INFOPLIST_FILE = UiDesigning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
